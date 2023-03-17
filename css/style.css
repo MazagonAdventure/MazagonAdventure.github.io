@@ -118,6 +118,7 @@ section h1, section h2 {
 section h4 {
   text-align: center;
   color: var(--secondary-color);
+  font-size: 16px;
  }
 section p {
   font-size: 20px;
