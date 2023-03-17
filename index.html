@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MazagonAdventure</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/DAILY_DATES_ICONWOW.png">
+    <script src="js/utils/include.js"></script>
+    <script src="js/DarkTheme.js" type="module"></script>
+    <script src="js/animacionimagen.js" type="module"></script>
+    
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <img src="images\fg(1).png" id="fg" style="width: 200px; margin-right: 40px; margin-left: 15%;">
+                <img src="/images/moon.svg" id="icondark">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="images\EN DESARROLLO.txt" download="EN DESARROLLO.txt">Descargar</a></li>
+                <li><a href="https://www.fallguys.com/es-ES/news">Noticias</a></li>
+                <li><a href="https://www.fallguys.com/es-ES/season-pass">Pase de temporada</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="download" style="margin-top:120px;">
+            <h1>Descarga Mazagon Adventure ahora</h1>
+            <p>Únete a la diversión y disfruta de emocionantes mundos llenos de enemigos. ¡Es hora de caer y fracasar, y volver a intentarlo!</p>
+            <a href="images\EN DESARROLLO.txt" download="EN DESARROLLO.txt" class="btn-download">Descargar ahora</a>
+        </section>
+        <section class="features">
+            <h2>Características principales</h2>
+            <ul>
+                <li>Diversos obstáculos y desafíos en cada nivel</li>
+                <li>Selección de personajes y disfraces</li>
+                <li>Partidas rápidas y emocionantes</li>
+            </ul>
+        </section>
+        <section class="screenshots">
+            <h2>Capturas de pantalla</h2>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 4</div>
+                  <img src="images\1(1).jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 4</div>
+                  <img src="images\2.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 4</div>
+                  <img src="images\3.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">4 / 4</div>
+                  <img src="images\4.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                </div>
+        </section>
+        
+        <section class="system-requirements">
+            <h2>Requisitos del sistema</h2>
+            <ul>
+                <li>SO: Windows 10 64bit only</li>
+                <li>Procesador: Intel Core i5 or AMD equivalent</li>
+                <li>Memoria RAM: 8 GB de RAM</li>
+                <li>Tarjeta gráfica: NVIDIA GTX 660 o AMD Radeon HD 7950</li>
+                <li>DirectX: Versión 11</li>
+                <li>Conexión a internet de banda ancha</li>
+                <li>Almacenamiento: 2 GB de espacio disponible</li>
+            </ul>
+        </section>
+    </main>
+    <footer style = "height: 50px;">
+        <p style="text-align: center; padding-top: 12px;">&copy; 2023 Mazagon Adventure. Todos los derechos reservados.</p>
+        <br>
+        <p style="text-align: center;">Sigueme en: <a href="https://twitter.com/Virgi_xz"><img src="images/twt.png" alt="Descripción de la imagen" class="rotar-imagen" style="margin-left: 5px;"></p> </a>
+        <br>
+    </footer>
+</body>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+</html>

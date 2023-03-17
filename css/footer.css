@@ -1,0 +1,4 @@
+@import url('/web/fonts/poppins.woff2');
+p {
+    font-family: MyWebFont;
+}
